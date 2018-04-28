@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://localhost/hackfresno/index.html -->
+<html class="mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+            <meta name="viewport" content="width=device-width, initial-scale=1">    
+            <script src="./Weather Data_files/material.min.js.download"></script>
+            <link rel="stylesheet" href="./Weather Data_files/material.indigo-pink.min.css">
+            <!-- Material Design icon font -->
+            <link rel="stylesheet" href="./Weather Data_files/icon">
+            <!-- W3 CSS-->
+            <link rel="stylesheet" href="./Weather Data_files/w3.css">
+            <title>Weather Data</title>
+    <style>
+            .centered {
+                position: absolute;
+                transform: translate(-50%,-50%);
+                top: 50%;
+                left: 50%;
+                text-align: center;
+            }
+            body { 
+                background: linear-gradient(to bottom, #003366,#12e2ae 100%);
+                text-decoration-color: white;
+            }
+            .footer
+            {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: gray;
+                color: white;
+                text-align: center;
+                
+            }
+            
+    </style>
+    
+    </head>
+    <body>
+         
+        <div class=" centered w3-animate-fade " >
+                
+            <form  id="name1" action = "post.php" method="post">
+                <div class="mdl-textfield mdl-js-textfield is-upgraded" data-upgraded=",MaterialTextfield">
+                    <input  class="mdl-textfield__input" type="text" id="sample1" name="Crop">
+                    <label textalign="center" class="mdl-textfield__label" for="sample1">Crop</label>
+                </div>
+                                <br>
+                <div class="mdl-textfield mdl-js-textfield is-upgraded" data-upgraded=",MaterialTextfield">
+                    <input  class="mdl-textfield__input" type="text" id="sample1" name="Sfeet">
+                    <label textalign="center" class="mdl-textfield__label" for="sample1">Square FT</label>
+                </div> 
+                <br>
+                <div class="mdl-textfield mdl-js-textfield is-upgraded" data-upgraded=",MaterialTextfield">
+                        <input  class="mdl-textfield__input" type="text" id="sample1" name="Gallons Used">
+                        <label textalign="center" class="mdl-textfield__label" for="sample1">Gallons</label>
+                </div>
+                <br>
+               
+                <div class="mdl-textfield mdl-js-textfield is-upgraded" data-upgraded=",MaterialTextfield">
+                        <input  class="mdl-textfield__input" type="text" id="sample1" name="Zipcode">
+                        <label textalign="center" class="mdl-textfield__label" for="sample1">Zipcode</label>
+                </div>
+                <br>
+                <!-- Raised button with ripple -->
+                
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                     Button
+                </button>
+            </form>   
+        </div>        
+
+
+       
+    
+</body>
+
+</html>
