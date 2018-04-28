@@ -21,23 +21,37 @@
                 background: linear-gradient(to bottom, #003366,#12e2ae 100%);
                 text-decoration-color: white;
             }
+            .header{
+                position: fixed;
+                width:100%;
+                left:0;
+                top:0;
+                background-color: #12e2ae;
+                text-align: center;
+
+            }
             .footer
             {
                 position: fixed;
-                left: 0;
-                bottom: 0;
                 width: 100%;
-                background-color: gray;
+                left:0;
+                bottom:0%;
                 color: white;
+                background-color: gray;
                 text-align: center;
+
                 
             }
             
     </style>
     
     </head>
+    
     <body>
-         
+    <div class="header">
+        <p>test</p>
+
+    </div>
         <div class=" centered w3-animate-fade " >
                 
             <form  id="name1" action = "post.php" method="post">
@@ -65,12 +79,17 @@
                 <!-- Raised button with ripple -->
                 
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-                     Button
+                     Submit
                 </button>
-            </form>   
+            </form>
+                <form action="gmap.html">
+                    <input type="submit" value="Go to Google" />
+                </form>   
         </div>        
 
-
+<div class="footer">
+    <p>Footer</p>
+</div>
        
     
 </body>

@@ -15,6 +15,11 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 
+$crop = $_POST["Crop"]; 
+$sQfeet= $_POST["Sfeet"];
+$Gal = $_POST["Gallons Used"];
+$Zip = $_POST["Zipcode"];
+$sql = "CREATE DATABASE UserInfo";
 //CREATE Connection
 $conn = new mysqli($servername, $username, $password);
 
@@ -27,7 +32,8 @@ if($conn -> connect_error)
 Echo "Connected Sucessfully:";
 
 //CREATE Database
-$sql = "CREATE DATABASE UserInfo";
+
+
 if($conn -> query($sql) === TRUE)
 {
     echo "Database Created Sucessfully";
@@ -36,6 +42,25 @@ else
 {
     echo "Error Creating Database: " .$conn -> error;
 }
+
+//CREATE Table
+$sql = "CREATE TABLE MyGuests (
+     
+    Crop VARCHAR(30) NOT NULL,
+    Sfeet VARCHAR(30) NOT NULL,
+    Gallons Used VARCHAR(50),
+    Zipcode VARCHAR(5) NOT NULL)";
+    
+
+
+
+//Insertion into Database
+$sqlinsert = "INSERT INTO myGuests (Crop, Sfeet, Gallons Used, Zipcode) VALUES ('$crop','$sQfeet','$Gal','$Zip')";
+
+
+$insert = mysqli_query($conn , $sqlinsert);
+
+
 
 $conn -> close();
 ?>
