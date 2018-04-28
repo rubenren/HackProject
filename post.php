@@ -15,11 +15,11 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 
-$crop = $_POST["Crop"]; 
-$Price= $_POST["Price"];
+$crop = $_POST["crop"]; 
+$price= $_POST["price"];
 //$Gal = $_POST["Gallons Used"];
-$Zip = $_POST["Zipcode"];
-$sql = "CREATE DATABASE UserInfo";
+$zip = $_POST["zipcode"];
+$sql = "CREATE DATABASE userinfo";
 //CREATE Connection
 $conn = new mysqli($servername, $username, $password);
 
@@ -33,7 +33,7 @@ Echo "Connected Sucessfully:";
 
 //CREATE Database
 
-
+/*
 if($conn -> query($sql) === TRUE)
 {
     echo "Database Created Sucessfully";
@@ -48,18 +48,18 @@ $sql = "CREATE TABLE MyGuests (
      
     Crop VARCHAR(30) NOT NULL,
     price VARCHAR(30) NOT NULL,
- //   Gallons Used VARCHAR(50),
+   Gallons Used VARCHAR(50),
     Zipcode VARCHAR(5) NOT NULL)";
-    
+  */  
 
 
 
 //Insertion into Database
-$sqlinsert = "INSERT INTO myGuests (Crop, price, Zipcode) VALUES ('$crop','$Price','$Zip')";
-
+$sqlinsert = "INSERT INTO myguests (crop, price, zipcode) VALUES ('$crop','$price','$zip')";
+$sqlfetch = "SELECT * FROM myguests ";
 
 $insert = mysqli_query($conn , $sqlinsert);
-
+$fetch = mysqli_query($conn,$sqlfetch);
 
 
 $conn -> close();
@@ -67,4 +67,4 @@ $conn -> close();
 
 
 </body>
-</html>>
+</html>
