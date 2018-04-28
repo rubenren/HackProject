@@ -16,8 +16,8 @@ $username = "root";
 $password = "";
 
 $crop = $_POST["Crop"]; 
-$sQfeet= $_POST["Sfeet"];
-$Gal = $_POST["Gallons Used"];
+$Price= $_POST["Price"];
+//$Gal = $_POST["Gallons Used"];
 $Zip = $_POST["Zipcode"];
 $sql = "CREATE DATABASE UserInfo";
 //CREATE Connection
@@ -47,15 +47,15 @@ else
 $sql = "CREATE TABLE MyGuests (
      
     Crop VARCHAR(30) NOT NULL,
-    Sfeet VARCHAR(30) NOT NULL,
-    Gallons Used VARCHAR(50),
+    price VARCHAR(30) NOT NULL,
+ //   Gallons Used VARCHAR(50),
     Zipcode VARCHAR(5) NOT NULL)";
     
 
 
 
 //Insertion into Database
-$sqlinsert = "INSERT INTO myGuests (Crop, Sfeet, Gallons Used, Zipcode) VALUES ('$crop','$sQfeet','$Gal','$Zip')";
+$sqlinsert = "INSERT INTO myGuests (Crop, price, Zipcode) VALUES ('$crop','$Price','$Zip')";
 
 
 $insert = mysqli_query($conn , $sqlinsert);
